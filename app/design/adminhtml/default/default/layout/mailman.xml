@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2014 Classy Geeks llc. All Rights Reserved
+ * http://classygeeks.com
+ * MIT License:
+ * http://opensource.org/licenses/MIT
+ */
+-->
+<layout>
+	<adminhtml_mailman_queue>
+		<reference name="content">
+			<block type="mailman/adminhtml_grid_queue" name="mailman_grid_queue" />
+		</reference>
+	</adminhtml_mailman_queue>
+	<adminhtml_mailman_view>
+		<reference name="content">
+			<block type="adminhtml/template" name="mailman_queue_view" template="mailman/view.phtml" />
+			<block type="mailman/adminhtml_grid_events" name="mailman_grid_events" />
+		</reference>
+	</adminhtml_mailman_view>
+</layout>

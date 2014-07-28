@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2014 Classy Geeks llc. All Rights Reserved
+ * http://classygeeks.com
+ * MIT License:
+ * http://opensource.org/licenses/MIT
+ */
+-->
+<config>
+	<tabs>
+        <classygeeks_tab>
+            <label>Classy Geeks</label>
+            <sort_order>180</sort_order>
+        </classygeeks_tab>
+    </tabs>
+    <sections>
+        <mailman>
+			<label>Mail Man</label>
+            <tab>classygeeks_tab</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>2</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+	        <groups>
+		        <license>
+                    <label>License Activation</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                		<key>
+                            <label>License Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </key>
+	                    <email>
+                            <label>Order Email Address</label>
+                            <frontend_type>text</frontend_type>
+		                    <validate>validate-email</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </email>
+                    </fields>
+                </license>
+				<settings>
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                		<enabled>
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+	                    <num_sent_cycle>
+                            <label># Emails To Send Each Iteration</label>
+                            <frontend_type>text</frontend_type>
+		                    <validate>validate-number</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </num_sent_cycle>
+	                    <num_max_attempts>
+                            <label># Max Send Attempts Per Email</label>
+                            <frontend_type>text</frontend_type>
+		                    <validate>validate-number</validate>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </num_max_attempts>
+	                    <num_days_purge>
+                            <label># Days To Keep Messages Before Deletion</label>
+                            <frontend_type>text</frontend_type>
+		                    <validate>validate-number</validate>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </num_days_purge>
+	                    <email_default_sender>
+                            <label>Default Email Sender, If None Provided</label>
+                            <frontend_type>text</frontend_type>
+		                    <validate>validate-email</validate>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </email_default_sender>
+                    </fields>
+                </settings>
+		        <smtp>
+                    <label>SMTP</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+	                    <server>
+                            <label>Server</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </server>
+	                    <port>
+                            <label>Port</label>
+                            <frontend_type>text</frontend_type>
+		                    <validate>validate-number</validate>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </port>
+	                    <auth>
+                            <label>Authentication</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mailman/config_adminhtml_auth</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </auth>
+	                    <ssl>
+                            <label>SSL</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>mailman/config_adminhtml_ssl</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ssl>
+	                    <username>
+                            <label>Username</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </username>
+	                    <password>
+                            <label>Password</label>
+                            <frontend_type>password</frontend_type>
+		                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </password>
+	                    <testsend>
+                            <label>Test Send</label>
+                            <frontend_type>button</frontend_type>
+		                    <frontend_model>mailman/adminhtml_system_testsend</frontend_model>
+		                    <comment><![CDATA[You must save settings before sending a test email.]]></comment>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </testsend>
+                    </fields>
+                </smtp>
+		        <webhooks>
+                    <label>Web Hooks</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+	                    <sendgrid>
+                            <label>Web Hooks</label>
+                            <frontend_type>button</frontend_type>
+							<frontend_model>mailman/adminhtml_system_webhooks</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sendgrid>
+					</fields>
+		        </webhooks>
+             </groups>
+		</mailman>
+	</sections>
+</config>

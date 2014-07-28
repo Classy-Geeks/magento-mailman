@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+/**
+ * Copyright 2014 Classy Geeks llc. All Rights Reserved
+ * http://classygeeks.com
+ * MIT License:
+ * http://opensource.org/licenses/MIT
+ */
+ */
+-->
+<config>
+	<menu>
+		<mailman translate="title" module="mailman">
+			<title>Mail Man</title>
+			<sort_order>80</sort_order>
+			<children>
+				<queue>
+					<title>Queue</title>
+					<sort_order>1</sort_order>
+					<action>adminhtml/mailman/queue</action>
+				</queue>
+			</children>
+		</mailman>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+	                            <children>
+	                                <mailman translate="title" module="mailman">
+	                                    <title>Mail Man</title>
+	                                </mailman>
+	                            </children>
+	                        </config>
+						</children>
+					</system>
+					<mailman translate="title" module="mailman">
+						<title>Mail Man</title>
+						<sort_order>80</sort_order>
+						<children>
+							<queue translate="title" module="mailman">
+								<title>Queue</title>
+								<sort_order>1</sort_order>
+							</queue>
+						</children>
+					</mailman>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

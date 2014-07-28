@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    //<![CDATA[
+
+        // Send test email
+	    function sendTestEmail() {
+
+		    // -- Ajax
+	        new Ajax.Request('<?php echo($this->getAjaxUrl()); ?>', {
+	            method:             'post',
+		        requestHeaders:     { Accept: 'application/json' },
+		        parameters:         { email: $F('mailman_testsend_email') },
+	            onSuccess:          function(oTransport){
+
+		            var oJson = oTransport.responseText.evalJSON(true);
+		            if (oJson.error){
+		                alert('There was an error with your SMTP configuration!');
+		            }
+		            else {
+			            alert('Test email successfully sent. Please check your inbox to verify.');
+		            }
+	            }
+	        });
+	    }
+    //]]>
+</script>
+<input type="text" class="input-text" value="" id="mailman_testsend_email" />
+<br /><br />
+<?php echo($this->getButtonHtml()); ?>

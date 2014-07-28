@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    //<![CDATA[
+
+        // Regenerate key
+	    function regenerateKey() {
+
+		    // -- Ajax
+	        new Ajax.Request('<?php echo($this->getAjaxRegenerateUrl()); ?>', {
+	            method:             'post',
+		        requestHeaders:     { Accept: 'application/json' },
+	            onSuccess:          function(oTransport){
+
+		            var oJson = oTransport.responseText.evalJSON(true);
+		            if (oJson.error){
+		                alert('There was an error regenerating the web hook key!');
+		            }
+		            else {
+			            location.reload();
+		            }
+	            }
+	        });
+	    }
+    //]]>
+</script>
+<p>If you use any of the services below we have built in Web Hooks for the service's API, in order to give you further email message event reporting. A unique key is provided for the web hooks. You can regenerate this key at any time below.</p>
+<br />
+<h4><?php echo(Mage::helper('mailman')->__('SendGrid')); ?></h4>
+<p>SendGrid's cloud-based email infrastructure relieves businesses of the cost and complexity of maintaining custom email systems. SendGrid provides reliable delivery, scalability and real-time analytics along with flexible API's that make custom integration a breeze.</p>
+<p><a href="http://sendgrid.com" target="_blank">http://sendgrid.com</a></p>
+<input type="text" class="input-text" value="<?php echo($this->getSendGridUrl()); ?>" id="mailman_webhooks_sendgrid" />
+<br /><br />
+<?php echo($this->getButtonHtml()); ?>

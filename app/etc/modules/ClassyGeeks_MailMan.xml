@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2014 Classy Geeks llc. All Rights Reserved
+ * http://classygeeks.com
+ * MIT License:
+ * http://opensource.org/licenses/MIT
+ */
+-->
+<config>
+    <modules>
+        <Classygeeks_Mailman>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Classygeeks_Mailman>
+    </modules>
+</config>
