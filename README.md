@@ -1,5 +1,4 @@
 # magento-mailman
-
 Magento - Enterprise level mail queue with SendGrid support
 
 # Setup
